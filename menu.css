@@ -1,0 +1,104 @@
+#menu-toggle {
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-btn > span {
+    transform: rotate(45deg);
+    background-color: #241b06;
+
+}
+
+#menu-toggle:checked ~ .menu-btn > span::before {
+    top: 0;
+    transform: rotate(0);
+    background-color: #241b06;
+}
+
+#menu-toggle:checked ~ .menu-btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: #241b06;
+}
+
+#menu-toggle:checked ~ .menu-box {
+    left: 0;
+    visibility: visible;
+}
+
+.menu-btn {
+    position: fixed;
+    z-index: 101;
+    top: 20px;
+    left: 20px;
+    display: flex;
+
+    align-items: center;
+    width: 26px;
+
+    height: 26px;
+    cursor: pointer;
+}
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+    position: absolute;
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    transition-duration: .25s;
+
+    background-color: #ffc45b;
+}
+
+.menu-btn > span::before {
+    top: -8px;
+    content: '';
+}
+
+.menu-btn > span::after {
+    top: 8px;
+    content: '';
+}
+
+.menu-box {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: -100%;
+    display: block;
+
+    visibility: hidden;
+    width: 300px;
+
+    height: 100%;
+    margin: 0;
+
+    padding: 80px 0;
+    list-style: none;
+    transition-duration: .25s;
+    background-color: #ffbc3d;
+
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+.menu-item {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+
+    font-weight: 600;
+
+    display: block;
+    padding: 12px 24px;
+    transition-duration: .25s;
+
+    text-decoration: none;
+
+    color: #333;
+}
+
+.menu-item:hover {
+    background-color: rgba(36, 27, 6, 0.4);
+}
