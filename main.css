@@ -130,15 +130,15 @@ nav a:hover {
     padding: 15px 20px;
     color: black;
     border: 3px solid #ffc444;
-    background-color: transparent;
+    background-color: #ffc444;
 }
 
 .screen a:hover {
     cursor: pointer;
     transition: all 0.3s;
-    color: #1a1709;
-    border: 3px solid #ffc444;
-    background-color: #ffc444;
+    color: white;
+    border: 3px solid #49350c;
+    background-color: #49350c;
 }
 
 .line-up-wrapper {
